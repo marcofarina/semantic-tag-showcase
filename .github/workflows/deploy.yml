@@ -27,8 +27,9 @@ jobs:
           node-version: "20"
           cache: 'npm'
           
+      # MODIFICA: Usiamo 'npm install' invece di 'npm ci' per generare il lockfile se manca
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         
       - name: Build
         run: npm run build
