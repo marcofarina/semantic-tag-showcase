@@ -3,7 +3,7 @@ import SemanticBlock from './components/SemanticBlock';
 import BoxModelDemo from './components/BoxModelDemo';
 import Tour from './components/Tour';
 import { SEMANTIC_DATA, TOUR_STEPS } from './constants';
-import { Info, Code2, Moon, Sun } from 'lucide-react';
+import { Info, Moon, Sun } from 'lucide-react';
 
 const App: React.FC = () => {
   const [isTourOpen, setIsTourOpen] = useState(false);
