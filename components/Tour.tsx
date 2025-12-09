@@ -40,11 +40,8 @@ const Tour: React.FC<TourProps> = ({ steps, isOpen, onClose }) => {
 
   useEffect(() => {
     if (isOpen) {
-      // We do NOT hide overflow, so scrollIntoView works correctly.
-      // Instead we use a full-screen overlay to block interaction.
       updatePosition();
       window.addEventListener('resize', updatePosition);
-      // No scroll listener needed for absolute positioning relative to document!
     } else {
       setCurrentStep(0);
     }
@@ -95,15 +92,15 @@ const Tour: React.FC<TourProps> = ({ steps, isOpen, onClose }) => {
         className="absolute z-[101] w-full max-w-sm px-4 md:px-0 transition-all duration-500 ease-out"
         style={position ? getTooltipStyle(position, step.position) : { top: '50%', left: '50%', transform: 'translate(-50%, -50%)', position: 'fixed' }}
       >
-        <div className="bg-white dark:bg-slate-900 rounded-xl shadow-2xl p-6 border border-slate-200 dark:border-slate-700 animate-in fade-in zoom-in duration-300">
+        <div className="bg-white dark:bg-notion-card rounded-xl shadow-2xl p-6 border border-neutral-200 dark:border-notion-border animate-in fade-in zoom-in duration-300">
           <div className="flex justify-between items-start mb-4">
-            <h3 className="font-bold text-lg text-slate-900 dark:text-white">{step.title}</h3>
-            <button onClick={onClose} className="text-slate-400 hover:text-slate-600 dark:hover:text-white transition">
+            <h3 className="font-bold text-lg text-neutral-900 dark:text-white">{step.title}</h3>
+            <button onClick={onClose} className="text-neutral-400 hover:text-neutral-600 dark:hover:text-white transition">
               <X size={20} />
             </button>
           </div>
           
-          <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+          <p className="text-neutral-600 dark:text-neutral-300 mb-6 leading-relaxed">
             {step.content}
           </p>
 
@@ -112,7 +109,7 @@ const Tour: React.FC<TourProps> = ({ steps, isOpen, onClose }) => {
                {steps.map((_, idx) => (
                  <div 
                    key={idx} 
-                   className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentStep ? 'w-6 bg-blue-500' : 'w-1.5 bg-slate-200 dark:bg-slate-700'}`} 
+                   className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentStep ? 'w-6 bg-blue-500' : 'w-1.5 bg-neutral-200 dark:bg-neutral-700'}`} 
                  />
                ))}
             </div>
@@ -121,7 +118,7 @@ const Tour: React.FC<TourProps> = ({ steps, isOpen, onClose }) => {
               <button 
                 onClick={handlePrev}
                 disabled={currentStep === 0}
-                className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:hover:bg-transparent text-slate-500 dark:text-slate-300 transition"
+                className="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-30 disabled:hover:bg-transparent text-neutral-500 dark:text-neutral-300 transition"
               >
                 <ChevronLeft size={20} />
               </button>

@@ -100,3 +100,6 @@ typings/
 
 # Vite build output
 dist/
+
+# GitHub Workflows (Ignored locally as requested)
+.github/

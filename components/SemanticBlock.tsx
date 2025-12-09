@@ -23,9 +23,9 @@ const SemanticBlock: React.FC<SemanticBlockProps> = ({ data, className = '', chi
     <div 
       id={data.id}
       className={`
-        relative group rounded-xl border-2 p-6 md:p-8 transition-all duration-300
+        relative group rounded-xl border p-6 md:p-8 transition-all duration-300
         ${data.colorClass} ${data.borderColorClass} ${className}
-        ${isTourActive ? '' : 'hover:scale-[1.01] hover:shadow-2xl hover:shadow-black/20 dark:hover:shadow-black/40'}
+        ${isTourActive ? '' : 'hover:scale-[1.01] hover:shadow-2xl hover:shadow-black/10 dark:hover:shadow-black/50'}
       `}
     >
       <div className="flex justify-between items-start mb-5">
@@ -38,7 +38,7 @@ const SemanticBlock: React.FC<SemanticBlockProps> = ({ data, className = '', chi
       <h3 className={`font-bold text-xl mb-3 ${data.textColorClass}`}>{data.title}</h3>
       <p className={`text-base mb-6 opacity-90 ${data.textColorClass} leading-relaxed`}>{data.description}</p>
       
-      <div className="bg-slate-200 dark:bg-slate-950/50 rounded-lg p-4 mb-4 backdrop-blur-md border border-slate-300 dark:border-white/5 relative group/code shadow-sm">
+      <div className="bg-neutral-100 dark:bg-[#191919] rounded-lg p-4 mb-4 backdrop-blur-md border border-neutral-200 dark:border-white/10 relative group/code shadow-sm">
         <pre className={`text-sm font-mono overflow-x-auto whitespace-pre-wrap ${data.textColorClass}`}>
           {data.code}
         </pre>
@@ -51,7 +51,7 @@ const SemanticBlock: React.FC<SemanticBlockProps> = ({ data, className = '', chi
             transition-all duration-200
             ${copied 
               ? 'bg-green-500/20 text-green-600 dark:text-green-400' 
-              : 'bg-slate-300 dark:bg-white/10 text-slate-500 dark:text-slate-400 hover:bg-slate-400 dark:hover:bg-white/20 hover:text-slate-800 dark:hover:text-white opacity-0 group-hover/code:opacity-100'}
+              : 'bg-neutral-200 dark:bg-white/10 text-neutral-500 dark:text-neutral-400 hover:bg-neutral-300 dark:hover:bg-white/20 hover:text-neutral-800 dark:hover:text-white opacity-0 group-hover/code:opacity-100'}
           `}
           title="Copia codice"
         >

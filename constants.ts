@@ -7,9 +7,9 @@ export const SEMANTIC_DATA: Record<string, SemanticElementData> = {
     title: 'Intestazione',
     description: 'Contiene solitamente il logo, il titolo del sito o la navigazione principale.',
     code: '<header>\n  <h1>Il Mio Sito</h1>\n</header>',
-    colorClass: 'bg-red-50 dark:bg-red-950/30 hover:bg-red-100 dark:hover:bg-red-900/40',
+    colorClass: 'bg-red-50 dark:bg-red-950/20 hover:bg-red-100 dark:hover:bg-red-900/30',
     textColorClass: 'text-red-900 dark:text-red-200',
-    borderColorClass: 'border-red-200 dark:border-red-500/50'
+    borderColorClass: 'border-red-200 dark:border-red-900/50'
   },
   nav: {
     id: 'nav-block',
@@ -17,9 +17,9 @@ export const SEMANTIC_DATA: Record<string, SemanticElementData> = {
     title: 'Navigazione',
     description: 'Definisce una serie di link di navigazione. Destinato alla navigazione principale.',
     code: '<nav>\n  <a href="#">Home</a>\n  <a href="#">About</a>\n</nav>',
-    colorClass: 'bg-amber-50 dark:bg-amber-950/30 hover:bg-amber-100 dark:hover:bg-amber-900/40',
+    colorClass: 'bg-amber-50 dark:bg-amber-950/20 hover:bg-amber-100 dark:hover:bg-amber-900/30',
     textColorClass: 'text-amber-900 dark:text-amber-200',
-    borderColorClass: 'border-amber-200 dark:border-amber-500/50'
+    borderColorClass: 'border-amber-200 dark:border-amber-900/50'
   },
   main: {
     id: 'main-block',
@@ -27,9 +27,9 @@ export const SEMANTIC_DATA: Record<string, SemanticElementData> = {
     title: 'Contenuto Principale',
     description: 'Il contenuto principale del documento. Deve essere unico per la pagina.',
     code: '<main>\n  <!-- Contenuto unico -->\n</main>',
-    colorClass: 'bg-white dark:bg-slate-900',
-    textColorClass: 'text-slate-900 dark:text-slate-200',
-    borderColorClass: 'border-slate-300 dark:border-slate-700'
+    colorClass: 'bg-white dark:bg-[#191919]',
+    textColorClass: 'text-neutral-900 dark:text-neutral-200',
+    borderColorClass: 'border-neutral-300 dark:border-neutral-800'
   },
   section: {
     id: 'section-block',
@@ -37,9 +37,9 @@ export const SEMANTIC_DATA: Record<string, SemanticElementData> = {
     title: 'Sezione Tematica',
     description: 'Raggruppa contenuti correlati per argomento. Solitamente ha un titolo.',
     code: '<section>\n  <h2>Titolo Sezione</h2>\n  <p>Contenuto...</p>\n</section>',
-    colorClass: 'bg-blue-50 dark:bg-blue-950/30 hover:bg-blue-100 dark:hover:bg-blue-900/40',
+    colorClass: 'bg-blue-50 dark:bg-blue-950/20 hover:bg-blue-100 dark:hover:bg-blue-900/30',
     textColorClass: 'text-blue-900 dark:text-blue-200',
-    borderColorClass: 'border-blue-200 dark:border-blue-500/50'
+    borderColorClass: 'border-blue-200 dark:border-blue-900/50'
   },
   article: {
     id: 'article-block',
@@ -47,9 +47,9 @@ export const SEMANTIC_DATA: Record<string, SemanticElementData> = {
     title: 'Articolo Indipendente',
     description: 'Contenuto autonomo e riutilizzabile (es. post di un blog, commento, news).',
     code: '<article>\n  <h2>Titolo Post</h2>\n  <p>Testo del post...</p>\n</article>',
-    colorClass: 'bg-emerald-50 dark:bg-emerald-950/30 hover:bg-emerald-100 dark:hover:bg-emerald-900/40',
+    colorClass: 'bg-emerald-50 dark:bg-emerald-950/20 hover:bg-emerald-100 dark:hover:bg-emerald-900/30',
     textColorClass: 'text-emerald-900 dark:text-emerald-200',
-    borderColorClass: 'border-emerald-200 dark:border-emerald-500/50'
+    borderColorClass: 'border-emerald-200 dark:border-emerald-900/50'
   },
   aside: {
     id: 'aside-block',
@@ -57,9 +57,9 @@ export const SEMANTIC_DATA: Record<string, SemanticElementData> = {
     title: 'Barra Laterale',
     description: 'Contenuto tangenzialmente correlato a quello principale (es. sidebar, pubblicità).',
     code: '<aside>\n  <h3>Correlati</h3>\n  <ul>...</ul>\n</aside>',
-    colorClass: 'bg-violet-50 dark:bg-violet-950/30 hover:bg-violet-100 dark:hover:bg-violet-900/40',
+    colorClass: 'bg-violet-50 dark:bg-violet-950/20 hover:bg-violet-100 dark:hover:bg-violet-900/30',
     textColorClass: 'text-violet-900 dark:text-violet-200',
-    borderColorClass: 'border-violet-200 dark:border-violet-500/50'
+    borderColorClass: 'border-violet-200 dark:border-violet-900/50'
   },
   footer: {
     id: 'footer-block',
@@ -67,9 +67,9 @@ export const SEMANTIC_DATA: Record<string, SemanticElementData> = {
     title: 'Piè di Pagina',
     description: 'Contiene info sul copyright, link ai contatti, sitemap, etc.',
     code: '<footer>\n  <p>&copy; 2024</p>\n</footer>',
-    colorClass: 'bg-slate-200 dark:bg-slate-800/40 hover:bg-slate-300 dark:hover:bg-slate-800/60',
-    textColorClass: 'text-slate-600 dark:text-slate-400',
-    borderColorClass: 'border-slate-400 dark:border-slate-600'
+    colorClass: 'bg-neutral-100 dark:bg-neutral-900/40 hover:bg-neutral-200 dark:hover:bg-neutral-900/60',
+    textColorClass: 'text-neutral-600 dark:text-neutral-400',
+    borderColorClass: 'border-neutral-300 dark:border-neutral-800'
   },
   div: {
     id: 'div-block',
@@ -77,9 +77,9 @@ export const SEMANTIC_DATA: Record<string, SemanticElementData> = {
     title: 'Divisione Generica',
     description: 'Elemento a livello di blocco senza significato semantico. Usato per layout o stili.',
     code: '<div class="card">\n  ...\n</div>',
-    colorClass: 'bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700',
-    textColorClass: 'text-slate-700 dark:text-slate-300',
-    borderColorClass: 'border-slate-400 dark:border-slate-500'
+    colorClass: 'bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-800',
+    textColorClass: 'text-neutral-700 dark:text-neutral-300',
+    borderColorClass: 'border-neutral-300 dark:border-neutral-700'
   }
 };
 
